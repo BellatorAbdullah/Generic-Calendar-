@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* 1. Define the animation */
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Apply it to the body */
+body {
+  /* We make the background larger than the screen so it has room to move */
+  background: radial-gradient(circle at top right, #ff9a9e, transparent),
+              radial-gradient(circle at bottom left, #a18cd1, transparent);
+  background-size: 200% 200%; 
+  
+  /* This triggers the movement */
+  animation: gradient-flow 15s ease infinite;
+  
+  min-height: 100vh;
+  margin: 0;
+}
